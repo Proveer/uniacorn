@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Predictions</title>
+</head>
+<body>
+    <h1>Titanic</h1>
+    <!-- <a href="{% url 'result' %}">Get Result</a> -->
+    <h3>Get your predictions here</h3>
+    <p>Please Enter the required data to get tyhe predictions</p>
+
+    <br>
+
+    <form action="{% url 'result' %}">
+        {% csrf_token %}
+        <input type="text" name='pclass' placeholder="PASSENGER CLASS">
+        <br><br>
+        <input type="text" name='sex' placeholder="SEX">
+        <br><br>
+        <input type="text" name='age' placeholder="AGE">
+        <br><br>
+        <input type="text" name='sibsp' placeholder="SIBLINGS">
+        <br><br>
+        <input type="text" name='parch' placeholder="PARCH">
+        <br><br>
+        <input type="text" name='fare' placeholder="FARE">
+        <br><br>
+        <input type="text" name='embarked' placeholder="EMBARKED">
+        <br><br>
+        <input type="text" name='title' placeholder="TITLE">
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
